@@ -1,0 +1,157 @@
+!<arch>
+__.PKGDEF       0           0     0     644     14641     `
+go object darwin amd64 go1.4.2 X:precisestack
+
+$$
+package math
+	import runtime "runtime"
+	import big "math/big"
+	type @"math/big".Word uintptr
+	type @"math/big".divisor struct { @"math/big".bbb @"math/big".nat; @"math/big".nbits int; @"math/big".ndigits int }
+	import rand "math/rand" // indirect
+	type @"math/rand".Source interface { Int63() (? int64); Seed(@"math/rand".seed int64) }
+	type @"math/rand".Rand struct { @"math/rand".src @"math/rand".Source }
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) ExpFloat64 () (? float64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Float32 () (? float32)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Float64 () (? float64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Int () (? int)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Int31 () (? int32)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Int31n (@"math/rand".nÂ·3 int32) (? int32)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Int63 () (? int64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Int63n (@"math/rand".nÂ·3 int64) (? int64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Intn (@"math/rand".nÂ·3 int) (? int)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) NormFloat64 () (? float64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Perm (@"math/rand".nÂ·3 int) (? []int)
+	func (@"math/rand".rÂ·1 *@"math/rand".Rand) Seed (@"math/rand".seedÂ·2 int64)
+	func (@"math/rand".rÂ·2 *@"math/rand".Rand) Uint32 () (? uint32)
+	import io "io" // indirect
+	type @"io".RuneScanner interface { ReadRune() (@"io".r rune, @"io".size int, @"io".err error); UnreadRune() (? error) }
+	type @"math/big".nat []@"math/big".Word
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".add (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".nat) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".and (@"math/big".xÂ·3 @"math/big".nat "esc:0x0", @"math/big".yÂ·4 @"math/big".nat "esc:0x0") (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".andNot (@"math/big".xÂ·3 @"math/big".nat "esc:0x0", @"math/big".yÂ·4 @"math/big".nat "esc:0x0") (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x0") @"math/big".bit (@"math/big".iÂ·3 uint) (? uint) { var @"math/big".jÂ·4 int; ; @"math/big".jÂ·4 = int(@"math/big".iÂ·3 / 0x40); if @"math/big".jÂ·4 >= len(@"math/big".zÂ·2) { return 0x0 }; return uint(@"math/big".zÂ·2[@"math/big".jÂ·4] >> (@"math/big".iÂ·3 % 0x40) & @"math/big".Word(0x1)) }
+	func (@"math/big".xÂ·2 @"math/big".nat "esc:0x0") @"math/big".bitLen () (? int)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x0") @"math/big".bytes (@"math/big".bufÂ·3 []byte "esc:0x0") (@"math/big".iÂ·1 int)
+	func (@"math/big".zÂ·1 @"math/big".nat "esc:0x0") @"math/big".clear ()
+	func (@"math/big".xÂ·2 @"math/big".nat "esc:0x0") @"math/big".cmp (@"math/big".yÂ·3 @"math/big".nat "esc:0x0") (@"math/big".rÂ·1 int)
+	func (@"math/big".qÂ·1 @"math/big".nat) @"math/big".convertWords (@"math/big".sÂ·2 []byte "esc:0x0", @"math/big".charsetÂ·3 string "esc:0x0", @"math/big".bÂ·4 @"math/big".Word, @"math/big".ndigitsÂ·5 int, @"math/big".bbÂ·6 @"math/big".Word, @"math/big".tableÂ·7 []@"math/big".divisor "esc:0x0")
+	func (@"math/big".xÂ·2 @"math/big".nat "esc:0x0") @"math/big".decimalString () (? string)
+	func (@"math/big".zÂ·3 @"math/big".nat) @"math/big".div (@"math/big".z2Â·4 @"math/big".nat, @"math/big".uÂ·5 @"math/big".nat, @"math/big".vÂ·6 @"math/big".nat) (@"math/big".qÂ·1 @"math/big".nat, @"math/big".rÂ·2 @"math/big".nat)
+	func (@"math/big".zÂ·3 @"math/big".nat "esc:0x2") @"math/big".divLarge (@"math/big".uÂ·4 @"math/big".nat, @"math/big".uInÂ·5 @"math/big".nat, @"math/big".vÂ·6 @"math/big".nat) (@"math/big".qÂ·1 @"math/big".nat, @"math/big".rÂ·2 @"math/big".nat)
+	func (@"math/big".zÂ·3 @"math/big".nat) @"math/big".divW (@"math/big".xÂ·4 @"math/big".nat, @"math/big".yÂ·5 @"math/big".Word) (@"math/big".qÂ·1 @"math/big".nat, @"math/big".rÂ·2 @"math/big".Word)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".expNN (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".nat "esc:0x0", @"math/big".mÂ·5 @"math/big".nat) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".expNNWindowed (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".nat "esc:0x0", @"math/big".mÂ·5 @"math/big".nat) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".expWW (@"math/big".xÂ·3 @"math/big".Word, @"math/big".yÂ·4 @"math/big".Word) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".make (@"math/big".nÂ·3 int) (? @"math/big".nat)
+	func (@"math/big".xÂ·2 @"math/big".nat) @"math/big".modW (@"math/big".dÂ·3 @"math/big".Word) (@"math/big".rÂ·1 @"math/big".Word)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".mul (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".nat) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".mulAddWW (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".Word, @"math/big".rÂ·5 @"math/big".Word) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".mulRange (@"math/big".aÂ·3 uint64, @"math/big".bÂ·4 uint64) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".norm () (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".or (@"math/big".xÂ·3 @"math/big".nat "esc:0x0", @"math/big".yÂ·4 @"math/big".nat "esc:0x0") (? @"math/big".nat)
+	func (@"math/big".nÂ·2 @"math/big".nat) @"math/big".probablyPrime (@"math/big".repsÂ·3 int) (? bool)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".random (@"math/big".randÂ·3 *@"math/rand".Rand, @"math/big".limitÂ·4 @"math/big".nat "esc:0x0", @"math/big".nÂ·5 int) (? @"math/big".nat)
+	func (@"math/big".zÂ·4 @"math/big".nat) @"math/big".scan (@"math/big".rÂ·5 @"io".RuneScanner, @"math/big".baseÂ·6 int) (? @"math/big".nat, ? int, ? error)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".set (@"math/big".xÂ·3 @"math/big".nat "esc:0x0") (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".setBit (@"math/big".xÂ·3 @"math/big".nat "esc:0x0", @"math/big".iÂ·4 uint, @"math/big".bÂ·5 uint) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".setBytes (@"math/big".bufÂ·3 []byte "esc:0x0") (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".setUint64 (@"math/big".xÂ·3 uint64) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".setWord (@"math/big".xÂ·3 @"math/big".Word) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".shl (@"math/big".xÂ·3 @"math/big".nat, @"math/big".sÂ·4 uint) (? @"math/big".nat)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".shr (@"math/big".xÂ·3 @"math/big".nat, @"math/big".sÂ·4 uint) (? @"math/big".nat)
+	func (@"math/big".xÂ·2 @"math/big".nat "esc:0x0") @"math/big".string (@"math/big".charsetÂ·3 string "esc:0x0") (? string)
+	func (@"math/big".zÂ·2 @"math/big".nat) @"math/big".sub (@"math/big".xÂ·3 @"math/big".nat, @"math/big".yÂ·4 @"math/big".nat) (? @"math/big".nat)
+	func (@"math/big".xÂ·2 @"math/big".nat "esc:0x0") @"math/big".trailingZeroBits () (? uint)
+	func (@"math/big".zÂ·2 @"math/big".nat "esc:0x2") @"math/big".xor (@"math/big".xÂ·3 @"math/big".nat "esc:0x0", @"math/big".yÂ·4 @"math/big".nat "esc:0x0") (? @"math/big".nat)
+	import fmt "fmt" // indirect
+	type @"fmt".State interface { Flag(@"fmt".c int) (? bool); Precision() (@"fmt".prec int, @"fmt".ok bool); Width() (@"fmt".wid int, @"fmt".ok bool); Write(@"fmt".b []byte) (@"fmt".ret int, @"fmt".err error) }
+	type @"fmt".ScanState interface { Read(@"fmt".buf []byte) (@"fmt".n int, @"fmt".err error); ReadRune() (@"fmt".r rune, @"fmt".size int, @"fmt".err error); SkipSpace(); Token(@"fmt".skipSpace bool, @"fmt".f func(? rune) (? bool)) (@"fmt".token []byte, @"fmt".err error); UnreadRune() (? error); Width() (@"fmt".wid int, @"fmt".ok bool) }
+	type @"math/big".Int struct { @"math/big".neg bool; @"math/big".abs @"math/big".nat }
+	func (@"math/big".zÂ·2 *@"math/big".Int) Abs (@"math/big".xÂ·3 *@"math/big".Int "esc:0x0") (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Add (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) And (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) AndNot (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Binomial (@"math/big".nÂ·3 int64, @"math/big".kÂ·4 int64) (? *@"math/big".Int)
+	func (@"math/big".xÂ·2 *@"math/big".Int) Bit (@"math/big".iÂ·3 int) (? uint)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") BitLen () (? int)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x1") Bits () (? []@"math/big".Word) { return @"math/big".xÂ·2.@"math/big".abs }
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") Bytes () (? []byte)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") Cmp (@"math/big".yÂ·3 *@"math/big".Int "esc:0x0") (@"math/big".rÂ·1 int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Div (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·3 *@"math/big".Int) DivMod (@"math/big".xÂ·4 *@"math/big".Int, @"math/big".yÂ·5 *@"math/big".Int, @"math/big".mÂ·6 *@"math/big".Int) (? *@"math/big".Int, ? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Exp (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int "esc:0x0", @"math/big".mÂ·5 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".xÂ·1 *@"math/big".Int "esc:0x0") Format (@"math/big".sÂ·2 @"fmt".State, @"math/big".chÂ·3 rune)
+	func (@"math/big".zÂ·2 *@"math/big".Int) GCD (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int, @"math/big".aÂ·5 *@"math/big".Int, @"math/big".bÂ·6 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) GobDecode (@"math/big".bufÂ·3 []byte "esc:0x0") (? error)
+	func (@"math/big".xÂ·3 *@"math/big".Int "esc:0x0") GobEncode () (? []byte, ? error)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") Int64 () (? int64)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Lsh (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".nÂ·4 uint) (? *@"math/big".Int)
+	func (@"math/big".zÂ·3 *@"math/big".Int "esc:0x0") MarshalJSON () (? []byte, ? error)
+	func (@"math/big".zÂ·3 *@"math/big".Int "esc:0x0") MarshalText () (@"math/big".textÂ·1 []byte, @"math/big".errÂ·2 error)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Mod (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) ModInverse (@"math/big".gÂ·3 *@"math/big".Int, @"math/big".nÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Mul (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) MulRange (@"math/big".aÂ·3 int64, @"math/big".bÂ·4 int64) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Neg (@"math/big".xÂ·3 *@"math/big".Int "esc:0x0") (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Not (@"math/big".xÂ·3 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Or (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".xÂ·2 *@"math/big".Int) ProbablyPrime (@"math/big".nÂ·3 int) (? bool)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Quo (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·3 *@"math/big".Int) QuoRem (@"math/big".xÂ·4 *@"math/big".Int, @"math/big".yÂ·5 *@"math/big".Int, @"math/big".rÂ·6 *@"math/big".Int) (? *@"math/big".Int, ? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Rand (@"math/big".rndÂ·3 *@"math/rand".Rand, @"math/big".nÂ·4 *@"math/big".Int "esc:0x0") (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Rem (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Rsh (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".nÂ·4 uint) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Scan (@"math/big".sÂ·3 @"fmt".ScanState, @"math/big".chÂ·4 rune) (? error)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Set (@"math/big".xÂ·3 *@"math/big".Int "esc:0x0") (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) SetBit (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".iÂ·4 int, @"math/big".bÂ·5 uint) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int "esc:0x2") SetBits (@"math/big".absÂ·3 []@"math/big".Word) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) SetBytes (@"math/big".bufÂ·3 []byte "esc:0x0") (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) SetInt64 (@"math/big".xÂ·3 int64) (? *@"math/big".Int)
+	func (@"math/big".zÂ·3 *@"math/big".Int) SetString (@"math/big".sÂ·4 string, @"math/big".baseÂ·5 int) (? *@"math/big".Int, ? bool)
+	func (@"math/big".zÂ·2 *@"math/big".Int) SetUint64 (@"math/big".xÂ·3 uint64) (? *@"math/big".Int)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") Sign () (? int) { if len(@"math/big".xÂ·2.@"math/big".abs) == 0x0 { return 0x0 }; if @"math/big".xÂ·2.@"math/big".neg { return -0x1 }; return 0x1 }
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") String () (? string)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Sub (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".xÂ·2 *@"math/big".Int "esc:0x0") Uint64 () (? uint64)
+	func (@"math/big".zÂ·2 *@"math/big".Int) UnmarshalJSON (@"math/big".textÂ·3 []byte) (? error)
+	func (@"math/big".zÂ·2 *@"math/big".Int) UnmarshalText (@"math/big".textÂ·3 []byte) (? error)
+	func (@"math/big".zÂ·2 *@"math/big".Int) Xor (@"math/big".xÂ·3 *@"math/big".Int, @"math/big".yÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·2 *@"math/big".Int) @"math/big".binaryGCD (@"math/big".aÂ·3 *@"math/big".Int, @"math/big".bÂ·4 *@"math/big".Int) (? *@"math/big".Int)
+	func (@"math/big".zÂ·4 *@"math/big".Int) @"math/big".scan (@"math/big".rÂ·5 @"io".RuneScanner, @"math/big".baseÂ·6 int) (? *@"math/big".Int, ? int, ? error)
+	func @"".Jacobi (@"".xÂ·2 *@"math/big".Int "esc:0x0", @"".yÂ·3 *@"math/big".Int "esc:0x0") (? int)
+	func @"".Sqrt (@"".zÂ·2 *@"math/big".Int, @"".aÂ·3 *@"math/big".Int, @"".pÂ·4 *@"math/big".Int) (? bool)
+	func @"".init ()
+
+$$
+ _go_.6          0           0     0     644     9616      `
+go object darwin amd64 go1.4.2 X:precisestack
+
+!
+  go13ldmath/big.a ş"".Jacobi  à  ŞeH‹%    HD$ØH;Awè    ëåHì¨   H    H‰$è    H‹\$H‰\$@H    H‰$è    H‹\$H‰\$8H    H‰$è    H‹\$H‰\$0H‹\$@H‰$H‹œ$°   H‰\$è    H‹\$8H‰$H‹œ$¸   H‰\$è    HÇD$(   H‹\$@H‰$H‹    H‰\$è    H‹\$Hƒû uHÇ„$À       HÄ¨   ÃH‹\$8H‰$H‹    H‰\$è    H‹L$@H‹\$Hƒû uH‹\$(H‰œ$À   HÄ¨   ÃH‰$H‰L$H‹\$8H‰\$è    1ÀH‹\$@H‰$H‰D$ H‰D$è    H‹t$ H‹\$Hƒû uH‰ğHÿÀëĞH‰óHƒãHƒû tmH‹\$8Hƒû „›  L‹CH‹{H‹SL‰D$xH‰¼$€   H‰”$ˆ   H‰”$    L‰„$   Hƒÿ H‰¼$˜   †Q  I‹ HƒàHƒø„.  Hƒø„$  H‹\$0H‰$H‹\$@H‰\$H‰t$è    H‹t$8Hƒş „ñ   H‹VH‹NH‹FH‰T$HH‰L$PH‰D$XH‰„$    H‰”$   Hƒù H‰Œ$˜   †­   H‹HƒãHƒûubH‹\$0Hƒû „Š   H‹SH‹KH‹CH‰T$`H‰L$hH‰D$pH‰„$    H‰”$   Hƒù H‰Œ$˜   vJH‹HƒãHƒûuH‹\$(H÷ÛH‰\$(H‹\$@H‰$H‰t$è    H‹\$8H‰$H‹\$0H‰\$è    é¼ıÿÿè    ‰éoÿÿÿè    ‰éÿÿÿH‹\$(H÷ÛH‰\$(éÊşÿÿè    ‰é^şÿÿ,
+      *  0runtime.morestack_noctxt   J  "type.math/big.Int   \  "runtime.newobject   ~  "type.math/big.Int     "runtime.newobject   ²  "type.math/big.Int   Ä  "runtime.newobject     &math/big.(*Int).Set   Ä  &math/big.(*Int).Set   ö  "".zero   Š  &math/big.(*Int).Cmp   è  "".one   ü  &math/big.(*Int).Cmp   ö  &math/big.(*Int).Mod   ª  &math/big.(*Int).Bit   ˆ  &math/big.(*Int).Rsh   ¤  &math/big.(*Int).Set   Ô  &math/big.(*Int).Set   è  $runtime.panicindex   „  $runtime.panicindex   Ä  $runtime.panicindex   0Ğ   "".autotmp_0015  (type.[]math/big.Word "".autotmp_0014  (type.[]math/big.Word "".autotmp_0013 /(type.[]math/big.Word "".autotmp_0012  type.int "".autotmp_0010  type.int 
+"".&c ï$type.*math/big.Int 
+"".&b ß$type.*math/big.Int 
+"".&a Ï$type.*math/big.Int "".~r0 (type.[]math/big.Word "".~r0 ¿(type.[]math/big.Word "".~r0 _(type.[]math/big.Word "".s type.int "".j ÿtype.int "".~r2  type.int "".y $type.*math/big.Int "".x  $type.*math/big.Int ("ĞÅÏĞ>ÏĞ‰ ° p"N	%*(Y"©3,	  -%í= TgclocalsÂ·2018557e3ee0abccf2865b16663e690b TgclocalsÂ·91b94c2c40d358c762cfd1b355c99e48   ¬/Users/chaoteng/Documents/Project/Anonymity/src/github.com/dedis/crypto/math/jacobi.goş"".Sqrt  €  øeH‹%    H;awè    ëêHƒìpH‹”$€   H‹jHƒı …¬  1ÀHƒø u$H‹\$xH‰$HÇD$    è    Æ„$   HƒÄpÃH‰$H‹œ$ˆ   H‰\$è    H‹\$HƒûtÆ„$    HƒÄpÃH    H‰$è    H‹D$HÇD$8    H‰D$PH‰$H‹œ$ˆ   H‰\$H‹    H‰\$è    H‹\$PH‰$HÇD$    è    H‹L$PH‹\$Hƒû u)H‰$H‰L$H‹    H‰\$è    H‹\$8HÿÃH‰\$8ë°H    H‰$è    H‹D$H‰D$XH‰$HÇD$   è    H‹\$XH‰$H‹œ$ˆ   H‰\$è    H‹L$XH‹\$HƒûÿtH‰$H‰L$H‹    H‰\$è    ë¹H    H‰$è    H‹\$H‰\$@H    H‰$è    H‹\$H‰\$hH    H‰$è    H‹\$H‰\$`H    H‰$è    H‹\$H‰\$HH‹\$@H‰$H‹\$PH‰\$H‹    H‰\$è    H‹\$H‰$H‹\$@H‰\$H‹    H‰\$è    H‹\$H‰$H‹œ$€   H‰\$H‹\$@H‰\$H‹œ$ˆ   H‰\$è    H‹\$hH‰$H‹œ$€   H‰\$H‹\$PH‰\$H‹œ$ˆ   H‰\$è    H‹\$`H‰$H‹\$XH‰\$H‹\$PH‰\$H‹œ$ˆ   H‰\$è    H‹\$8H‰\$(HÇD$0    H‹\$HH‰$H‹\$hH‰\$è    H‹\$HH‰$H‹    H‰\$è    H‹L$HH‹\$Hƒû t6H‰$H‰L$H‹    H‰\$H‹œ$ˆ   H‰\$è    H‹\$0HÿÃH‰\$0ë H‹\$0Hƒû u%H‹\$xH‰$H‹\$@H‰\$è    Æ„$   HƒÄpÃH‰$HÇD$    è    H‹\$H‰$H‹\$HH‰\$H‹\$(H‹l$0H)ëHÿËH‰\$HÇD$   è    H‹\$ H‰$H‹\$`H‰\$H‹\$HH‰\$H‹œ$ˆ   H‰\$è    H‹D$HH‹\$`H‰$H‰D$H‰D$è    H‹\$H‰$H‹\$`H‰\$H‹œ$ˆ   H‰\$è    H‹D$@H‰$H‰D$H‹\$HH‰\$è    H‹\$H‰$H‹\$@H‰\$H‹œ$ˆ   H‰\$è    H‹D$hH‰$H‰D$H‹\$`H‰\$è    H‹\$H‰$H‹\$hH‰\$H‹œ$ˆ   H‰\$è    H‹\$0H‰\$(éşÿÿ¶€û tHÇÀÿÿÿÿéBûÿÿHÇÀ   é6ûÿÿ^
+         0runtime.morestack_noctxt   –  0math/big.(*Int).SetInt64   Ü  "".Jacobi   š  "type.math/big.Int   ¬  "runtime.newobject   ‚  "".one   –  &math/big.(*Int).Sub   Ä  &math/big.(*Int).Bit   „  "".two   ˜  &math/big.(*Int).Div   Ä  "type.math/big.Int   Ö  "runtime.newobject     0math/big.(*Int).SetInt64   Ä  "".Jacobi   „  "".one   ˜  &math/big.(*Int).Add   ª  "type.math/big.Int   ¼  "runtime.newobject   Ş  "type.math/big.Int   ğ  "runtime.newobject   ’  "type.math/big.Int   ¤  "runtime.newobject   Æ  "type.math/big.Int   Ø  "runtime.newobject      "".one   ´  &math/big.(*Int).Add   è  "".two   ü  &math/big.(*Int).Div   à	  &math/big.(*Int).Exp   Ä
+  &math/big.(*Int).Exp   ¢  &math/big.(*Int).Exp   ø  &math/big.(*Int).Set   ˜  "".one   ¬  &math/big.(*Int).Cmp   ì  "".two   š  &math/big.(*Int).Exp   ş  &math/big.(*Int).Set   ¼  0math/big.(*Int).SetInt64   ¨  ,math/big.(*Int).SetBit   †  &math/big.(*Int).Exp   À  &math/big.(*Int).Mul   Š  &math/big.(*Int).Mod   Ä  &math/big.(*Int).Mul     &math/big.(*Int).Mod   È  &math/big.(*Int).Mul   ’  &math/big.(*Int).Mod   @à  ,"".autotmp_0032  $type.*math/big.Int "".autotmp_0031  $type.*math/big.Int "".autotmp_0030  $type.*math/big.Int "".autotmp_0029  $type.*math/big.Int "".autotmp_0028  $type.*math/big.Int "".autotmp_0026  type.int "".autotmp_0023  type.int "".autotmp_0022  type.int "".autotmp_0020  type.int 
+"".&t O$type.*math/big.Int 
+"".&g $type.*math/big.Int 
+"".&b $type.*math/big.Int 
+"".&x _$type.*math/big.Int 
+"".&n /$type.*math/big.Int 
+"".&s ?$type.*math/big.Int "".m type.int "".r type.int "".e otype.int "".~r3 0type.bool "".p  $type.*math/big.Int "".a $type.*math/big.Int "".z  $type.*math/big.Int 4àAßà-ßà…ßàğ €
+ ""!	''+hz2/
+	*'
+|BB=
+!C$ 6 J€|q.·®ã TgclocalsÂ·764aa22a40e33f93da5af0837a4a72a3 TgclocalsÂ·bb8c5e7e1f2afdc6949a939d00e79512   ¨/Users/chaoteng/Documents/Project/Anonymity/src/github.com/dedis/crypto/math/sqrt.goş"".init     –eH‹%    H;awè    ëêHƒì¶    €û t¶    €ûuHƒÄÃè    Æ    è    HÇ$    è    H‹D$H    H‰$H‰D$è    HÇ$   è    H‹D$H    H‰$H‰D$è    HÇ$   è    H‹D$H    H‰$H‰D$è    Æ    HƒÄÃ"
+         0runtime.morestack_noctxt   :  "".initdoneÂ·   R  "".initdoneÂ·   p  "runtime.throwinit   € "".initdoneÂ·   Œ  math/big.init   ¦  math/big.NewInt   ¾  "".zero   Ú  .runtime.writebarrierptr   ô  math/big.NewInt   Œ  "".one   ¨  .runtime.writebarrierptr   Â  math/big.NewInt   Ú  "".two   ö  .runtime.writebarrierptr   ‚ "".initdoneÂ·       "".autotmp_0035  $type.*math/big.Int "".autotmp_0034  $type.*math/big.Int   “ Ğ J{'''x  7™ TgclocalsÂ·3280bececceccd33cb74587feedb1f9f TgclocalsÂ·3280bececceccd33cb74587feedb1f9f   ¨/Users/chaoteng/Documents/Project/Anonymity/src/github.com/dedis/crypto/math/sqrt.goşTgclocalsÂ·91b94c2c40d358c762cfd1b355c99e48 0  0              (   *    şTgclocalsÂ·2018557e3ee0abccf2865b16663e690b 0  0      
+   
+   
+   
+    şTgclocalsÂ·bb8c5e7e1f2afdc6949a939d00e79512 P  P                  ¢   ¢  ¢
+  ª
+  
+
+   şTgclocalsÂ·764aa22a40e33f93da5af0837a4a72a3 P  P      *   *   *   *   *   *   *   *    şTgclocalsÂ·3280bececceccd33cb74587feedb1f9f           şTgclocalsÂ·3280bececceccd33cb74587feedb1f9f           ş*"".zero  $type.*math/big.Int   ş*"".one  $type.*math/big.Int   ş*"".two  $type.*math/big.Int   ş,"".initdoneÂ·  type.uint8   ş"".JacobiÂ·f              "".Jacobi   ş(runtime.newobjectÂ·f              "runtime.newobject   ş,math/big.(*Int).SetÂ·f              &math/big.(*Int).Set   ş,math/big.(*Int).CmpÂ·f              &math/big.(*Int).Cmp   ş,math/big.(*Int).ModÂ·f              &math/big.(*Int).Mod   ş,math/big.(*Int).BitÂ·f              &math/big.(*Int).Bit   ş*runtime.panicindexÂ·f              $runtime.panicindex   ş,math/big.(*Int).RshÂ·f              &math/big.(*Int).Rsh   ş,runtime.throwreturnÂ·f              &runtime.throwreturn   ş"".SqrtÂ·f              "".Sqrt   ş6math/big.(*Int).SetInt64Â·f              0math/big.(*Int).SetInt64   ş,math/big.(*Int).SubÂ·f              &math/big.(*Int).Sub   ş,math/big.(*Int).DivÂ·f              &math/big.(*Int).Div   ş,math/big.(*Int).AddÂ·f              &math/big.(*Int).Add   ş,math/big.(*Int).ExpÂ·f              &math/big.(*Int).Exp   ş2math/big.(*Int).SetBitÂ·f              ,math/big.(*Int).SetBit   ş,math/big.(*Int).MulÂ·f              &math/big.(*Int).Mul   ş"".initÂ·f              "".init   ş(runtime.throwinitÂ·f              "runtime.throwinit   ş math/big.initÂ·f              math/big.init   ş$math/big.NewIntÂ·f              math/big.NewInt   ş4runtime.writebarrierptrÂ·f              .runtime.writebarrierptr   şbruntime.gcbits.0x48844400000000000000000000000000     H„D              ş,go.string."[]big.Word" @  6        
+       []big.Word    ,go.string."[]big.Word"   ş(type.[]math/big.Word            =ÒŒN                                                                     runtime.algarray   0  bruntime.gcbits.0x48844400000000000000000000000000   P  ,go.string."[]big.Word"   p  :go.weak.type.*[]math/big.Word   €  "runtime.zerovalue     $type.math/big.Word   şLgo.typelink.[]big.Word/[]math/big.Word              (type.[]math/big.Word   ş&go.string."runtime" 0  0               runtime    &go.string."runtime"   ş,go.importpath.runtime.                       &go.string."runtime"   ş(go.string."math/big" @  2               math/big    (go.string."math/big"   ş.go.importpath.math/big.                       (go.string."math/big"   ş"runtime.zerovalue      ÿÿgo13ld
